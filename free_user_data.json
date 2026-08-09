@@ -1,0 +1,121 @@
+{
+  "email": "free@medvault.ai",
+  "userName": "Priya Patel",
+  "userPhone": "+91 98111 00000",
+  "plan": "FREE",
+  "familyMembers": [
+    {
+      "id": "fm-f1",
+      "name": "Aarav Patel",
+      "relationship": "Child",
+      "age": 12,
+      "bloodGroup": "O+",
+      "allergies": ["None"],
+      "chronicDiseases": ["None"],
+      "emergencyContact": "Priya Patel",
+      "emergencyPhone": "+91 98111 00000"
+    },
+    {
+      "id": "fm-f2",
+      "name": "Meera Patel",
+      "relationship": "Parent",
+      "age": 65,
+      "bloodGroup": "B-",
+      "allergies": ["Dust"],
+      "chronicDiseases": ["None"],
+      "emergencyContact": "Priya Patel",
+      "emergencyPhone": "+91 98111 00000"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep-f0-1",
+      "familyMemberId": "fm-f1",
+      "familyMemberName": "Aarav Patel",
+      "title": "Aarav Patel's General Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-06-10",
+      "status": "COMPLETED",
+      "hospitalName": "Civil Hospital",
+      "doctorName": "Dr. K.P. Singh",
+      "summary": "Patient is healthy. Regular vaccinations up to date."
+    },
+    {
+      "id": "rep-f0-2",
+      "familyMemberId": "fm-f1",
+      "familyMemberName": "Aarav Patel",
+      "title": "Aarav Patel's Routine Blood Test",
+      "type": "LAB_REPORT",
+      "date": "2026-07-20",
+      "status": "COMPLETED",
+      "hospitalName": "Pathology Lab",
+      "doctorName": "Dr. Anita Desai",
+      "summary": "Hemoglobin and other parameters are normal."
+    },
+    {
+      "id": "rep-f1-1",
+      "familyMemberId": "fm-f2",
+      "familyMemberName": "Meera Patel",
+      "title": "Meera Patel's General Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-06-10",
+      "status": "COMPLETED",
+      "hospitalName": "Civil Hospital",
+      "doctorName": "Dr. K.P. Singh",
+      "summary": "Patient is healthy. Regular vaccinations up to date."
+    },
+    {
+      "id": "rep-f1-2",
+      "familyMemberId": "fm-f2",
+      "familyMemberName": "Meera Patel",
+      "title": "Meera Patel's Routine Blood Test",
+      "type": "LAB_REPORT",
+      "date": "2026-07-20",
+      "status": "COMPLETED",
+      "hospitalName": "Pathology Lab",
+      "doctorName": "Dr. Anita Desai",
+      "summary": "Hemoglobin and other parameters are normal."
+    }
+  ],
+  "medicines": [],
+  "reminders": [],
+  "notifications": [
+    {
+      "id": "welcome-free",
+      "title": "Welcome to MedVault AI 👋",
+      "message": "Your secure family health vault is ready.",
+      "time": "2026-08-09T03:00:00.000Z",
+      "unread": true
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-init-free",
+      "action": "Free Account Seeded",
+      "device": "System",
+      "ip": "Internal",
+      "time": "2026-08-09T03:00:00.000Z",
+      "status": "SUCCESS"
+    }
+  ],
+  "referralData": {
+    "code": "MEDVAULT-PRIYA",
+    "link": "https://medvault-ai.com/signup?ref=MEDVAULT-PRIYA",
+    "completedCount": 0,
+    "targetCount": 20,
+    "proRewardClaimed": false,
+    "referredUsers": []
+  },
+  "wearables": [],
+  "healthTelemetry": {
+    "steps": 4200,
+    "stepGoal": 10000,
+    "sleepHours": 6.5,
+    "sleepScore": 65,
+    "screenTimeMinutes": 320,
+    "heartRate": 78,
+    "caloriesBurned": 1600,
+    "activeMinutes": 20
+  },
+  "emailLogs": []
+}

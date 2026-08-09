@@ -1,0 +1,145 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "userName": { "type": "string" },
+        "userPhone": { "type": "string" },
+        "plan": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastSyncedAt": { "type": "string" }
+      },
+      "required": ["email"]
+    },
+    "FamilyMember": {
+      "title": "Family Member",
+      "description": "Family member record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "relationship": { "type": "string" },
+        "age": { "type": "number" },
+        "bloodGroup": { "type": "string" },
+        "allergies": { "type": "array" },
+        "chronicDiseases": { "type": "array" },
+        "emergencyContact": { "type": "string" },
+        "emergencyPhone": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "Report": {
+      "title": "Medical Report",
+      "description": "Lightweight medical report document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "familyMemberId": { "type": "string" },
+        "familyMemberName": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "hospitalName": { "type": "string" },
+        "doctorName": { "type": "string" },
+        "diagnosis": { "type": "string" },
+        "reportDate": { "type": "string" },
+        "summary": { "type": "string" },
+        "fileUrl": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    },
+    "OcrResult": {
+      "title": "OCR Raw Result",
+      "description": "Separate raw OCR payload document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "reportId": { "type": "string" },
+        "rawText": { "type": "string" },
+        "extractedFields": { "type": "object" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId"]
+    },
+    "AiAnalysis": {
+      "title": "AI Analysis Result",
+      "description": "Detailed AI insight document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "reportId": { "type": "string" },
+        "insights": { "type": "string" },
+        "score": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId"]
+    },
+    "Medicine": {
+      "title": "Prescription Medicine",
+      "description": "Tracked medicine item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "familyMemberId": { "type": "string" },
+        "familyMemberName": { "type": "string" },
+        "name": { "type": "string" },
+        "dosage": { "type": "string" },
+        "morning": { "type": "boolean" },
+        "afternoon": { "type": "boolean" },
+        "night": { "type": "boolean" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "name"]
+    },
+    "Reminder": {
+      "title": "Reminder Item",
+      "description": "Scheduled reminder item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "time": { "type": "string" },
+        "isCompleted": { "type": "boolean" }
+      },
+      "required": ["id", "title"]
+    },
+    "TimelineItem": {
+      "title": "Health Activity Event",
+      "description": "Timeline audit record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "desc": { "type": "string" },
+        "time": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    }
+  },
+  "auth": {
+    "description": "User authentication",
+    "providers": [
+      "google.com",
+      "password"
+    ]
+  },
+  "firestore": {
+    "/user_profiles_v2/{userId}": {
+      "schema": "User",
+      "description": "Clean user profile collection"
+    },
+    "/reports_v2/{userId}/{reportId}": {
+      "schema": "Report",
+      "description": "User reports collection"
+    }
+  }
+}

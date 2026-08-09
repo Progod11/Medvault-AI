@@ -1,0 +1,137 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  clerkId       String         @unique
+  email         String         @unique
+  name          String?
+  avatar        String?
+  language      String         @default("en")
+  darkMode      Boolean        @default(false)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  familyMembers FamilyMember[]
+  reminders     Reminder[]
+  auditLogs     AuditLog[]
+}
+
+model FamilyMember {
+  id               String       @id @default(cuid())
+  userId           String
+  user             User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name             String
+  relationship     String
+  dateOfBirth      DateTime?
+  bloodGroup       String?
+  photo            String?
+  allergies        String[]
+  chronicDiseases  String[]
+  emergencyContact String?
+  emergencyPhone   String?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+  reports          Report[]
+  medicines        Medicine[]
+  visits           Visit[]
+}
+
+model Report {
+  id             String       @id @default(cuid())
+  familyMemberId String
+  familyMember   FamilyMember @relation(fields: [familyMemberId], references: [id], onDelete: Cascade)
+  title          String
+  type           ReportType
+  fileUrl        String
+  fileType       String
+  hospitalName   String?
+  doctorName     String?
+  diagnosis      String?
+  medicines      String[]
+  notes          String?
+  reportDate     DateTime
+  ocrText        String?
+  aiSummary      String?
+  tags           String[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Medicine {
+  id             String       @id @default(cuid())
+  familyMemberId String
+  familyMember   FamilyMember @relation(fields: [familyMemberId], references: [id], onDelete: Cascade)
+  name           String
+  dosage         String
+  morning        Boolean      @default(false)
+  afternoon      Boolean      @default(false)
+  night          Boolean      @default(false)
+  startDate      DateTime
+  endDate        DateTime?
+  isActive       Boolean      @default(true)
+  reminderOn     Boolean      @default(false)
+  notes          String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Visit {
+  id             String       @id @default(cuid())
+  familyMemberId String
+  familyMember   FamilyMember @relation(fields: [familyMemberId], references: [id], onDelete: Cascade)
+  doctorName     String
+  hospitalName   String?
+  visitDate      DateTime
+  reason         String?
+  notes          String?
+  nextVisit      DateTime?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Reminder {
+  id          String       @id @default(cuid())
+  userId      String
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  type        ReminderType
+  scheduledAt DateTime
+  isCompleted Boolean      @default(false)
+  notes       String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action    String
+  resource  String
+  details   String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+}
+
+enum ReportType {
+  LAB_REPORT
+  PRESCRIPTION
+  SCAN
+  BILL
+  VACCINATION
+  OTHER
+}
+
+enum ReminderType {
+  MEDICINE
+  APPOINTMENT
+  LAB_TEST
+  VACCINATION
+  OTHER
+}

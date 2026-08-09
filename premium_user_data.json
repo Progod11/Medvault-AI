@@ -1,0 +1,261 @@
+{
+  "email": "premium@medvault.ai",
+  "userName": "Rajesh Sharma",
+  "userPhone": "+91 98765 43210",
+  "plan": "PREMIUM",
+  "familyMembers": [
+    {
+      "id": "fm-p1",
+      "name": "Ananya Sharma",
+      "relationship": "Spouse",
+      "age": 38,
+      "bloodGroup": "B+",
+      "allergies": ["Penicillin"],
+      "chronicDiseases": ["None"],
+      "emergencyContact": "Rajesh Sharma",
+      "emergencyPhone": "+91 98765 43210"
+    },
+    {
+      "id": "fm-p2",
+      "name": "Vihaan Sharma",
+      "relationship": "Child",
+      "age": 10,
+      "bloodGroup": "O+",
+      "allergies": ["Dust", "Pollen"],
+      "chronicDiseases": ["Mild Asthma"],
+      "emergencyContact": "Ananya Sharma",
+      "emergencyPhone": "+91 98765 43211"
+    },
+    {
+      "id": "fm-p3",
+      "name": "Ishaan Sharma",
+      "relationship": "Parent",
+      "age": 70,
+      "bloodGroup": "A+",
+      "allergies": ["None"],
+      "chronicDiseases": ["Hypertension", "Type 2 Diabetes"],
+      "emergencyContact": "Rajesh Sharma",
+      "emergencyPhone": "+91 98765 43210"
+    },
+    {
+      "id": "fm-p4",
+      "name": "Kavita Sharma",
+      "relationship": "Parent",
+      "age": 68,
+      "bloodGroup": "A+",
+      "allergies": ["Sulfa drugs"],
+      "chronicDiseases": ["Arthritis"],
+      "emergencyContact": "Rajesh Sharma",
+      "emergencyPhone": "+91 98765 43210"
+    },
+    {
+      "id": "fm-p5",
+      "name": "Rohan Sharma",
+      "relationship": "Sibling",
+      "age": 32,
+      "bloodGroup": "B+",
+      "allergies": ["Peanuts"],
+      "chronicDiseases": ["None"],
+      "emergencyContact": "Rajesh Sharma",
+      "emergencyPhone": "+91 98765 43210"
+    },
+    {
+      "id": "fm-p6",
+      "name": "Sneha Sharma",
+      "relationship": "Other",
+      "age": 30,
+      "bloodGroup": "O-",
+      "allergies": ["None"],
+      "chronicDiseases": ["None"],
+      "emergencyContact": "Rohan Sharma",
+      "emergencyPhone": "+91 98765 43215"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep-p1-1",
+      "familyMemberId": "fm-p1",
+      "familyMemberName": "Ananya Sharma",
+      "title": "Ananya Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p1-2",
+      "familyMemberId": "fm-p1",
+      "familyMemberName": "Ananya Sharma",
+      "title": "Ananya Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    },
+    {
+      "id": "rep-p2-1",
+      "familyMemberId": "fm-p2",
+      "familyMemberName": "Vihaan Sharma",
+      "title": "Vihaan Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p2-2",
+      "familyMemberId": "fm-p2",
+      "familyMemberName": "Vihaan Sharma",
+      "title": "Vihaan Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    },
+    {
+      "id": "rep-p3-1",
+      "familyMemberId": "fm-p3",
+      "familyMemberName": "Ishaan Sharma",
+      "title": "Ishaan Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p3-2",
+      "familyMemberId": "fm-p3",
+      "familyMemberName": "Ishaan Sharma",
+      "title": "Ishaan Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    },
+    {
+      "id": "rep-p4-1",
+      "familyMemberId": "fm-p4",
+      "familyMemberName": "Kavita Sharma",
+      "title": "Kavita Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p4-2",
+      "familyMemberId": "fm-p4",
+      "familyMemberName": "Kavita Sharma",
+      "title": "Kavita Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    },
+    {
+      "id": "rep-p5-1",
+      "familyMemberId": "fm-p5",
+      "familyMemberName": "Rohan Sharma",
+      "title": "Rohan Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p5-2",
+      "familyMemberId": "fm-p5",
+      "familyMemberName": "Rohan Sharma",
+      "title": "Rohan Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    },
+    {
+      "id": "rep-p6-1",
+      "familyMemberId": "fm-p6",
+      "familyMemberName": "Sneha Sharma",
+      "title": "Sneha Sharma's Annual Wellness Checkup",
+      "type": "LAB_REPORT",
+      "date": "2026-07-10",
+      "status": "COMPLETED",
+      "hospitalName": "Apollo Hospitals",
+      "doctorName": "Dr. Arvind Mehta",
+      "summary": "All vital signs within normal range."
+    },
+    {
+      "id": "rep-p6-2",
+      "familyMemberId": "fm-p6",
+      "familyMemberName": "Sneha Sharma",
+      "title": "Sneha Sharma's Specialized Blood Panel",
+      "type": "LAB_REPORT",
+      "date": "2026-07-25",
+      "status": "COMPLETED",
+      "hospitalName": "Max Healthcare",
+      "doctorName": "Dr. Sangeeta Rao",
+      "summary": "Vitamin D levels slightly low."
+    }
+  ],
+  "medicines": [],
+  "reminders": [],
+  "notifications": [
+    {
+      "id": "welcome-premium",
+      "title": "Premium Vault Activated 🌟",
+      "message": "Your family's health data is now fully synchronized.",
+      "time": "2026-08-09T03:00:00.000Z",
+      "unread": true
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-init-premium",
+      "action": "Premium Account Seeded",
+      "device": "System",
+      "ip": "Internal",
+      "time": "2026-08-09T03:00:00.000Z",
+      "status": "SUCCESS"
+    }
+  ],
+  "referralData": {
+    "code": "MEDVAULT-RAJESH",
+    "link": "https://medvault-ai.com/signup?ref=MEDVAULT-RAJESH",
+    "completedCount": 5,
+    "targetCount": 20,
+    "proRewardClaimed": true,
+    "referredUsers": []
+  },
+  "wearables": [],
+  "healthTelemetry": {
+    "steps": 8420,
+    "stepGoal": 10000,
+    "sleepHours": 7.5,
+    "sleepScore": 82,
+    "screenTimeMinutes": 240,
+    "heartRate": 72,
+    "caloriesBurned": 2100,
+    "activeMinutes": 45
+  },
+  "emailLogs": []
+}

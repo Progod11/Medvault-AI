@@ -1,0 +1,11 @@
+{
+  "projectId": "medvault-official",
+  "appId": "1:237741616574:web:38481cb26640852ae21def",
+  "apiKey": "AIzaSyAslhlwCi8vTlrlly1N0LRfr3smlD90CW4",
+  "authDomain": "medvault-official.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "medvault-official.firebasestorage.app",
+  "messagingSenderId": "237741616574",
+  "measurementId": "G-L01TFN0PQ7",
+  "recaptchaSiteKey": ""
+}

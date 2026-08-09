@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default deny rule
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Secure user document isolation rule
+    match /user_profiles_v2/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      match /{allSubcollections=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // Reports collection rule
+    match /reports_v2/{userId}/{reportId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
